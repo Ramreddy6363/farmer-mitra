@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Agricultural Knowledge Base — Kisan Mitra</title>
+    <style>
+      @page {
+        size: A4;
+        margin: 18mm 16mm;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Segoe UI', 'Noto Sans', Arial, sans-serif;
+        font-size: 11pt;
+        line-height: 1.5;
+        color: #1f2933;
+        margin: 0;
+      }
+      h1 {
+        color: #2e5016;
+        font-size: 24pt;
+        margin: 0 0 4px;
+      }
+      h2 {
+        color: #33691e;
+        font-size: 15pt;
+        border-bottom: 2px solid #aed581;
+        padding-bottom: 4px;
+        margin-top: 26px;
+        page-break-after: avoid;
+      }
+      h3 {
+        color: #558b2f;
+        font-size: 12.5pt;
+        margin-bottom: 2px;
+        page-break-after: avoid;
+      }
+      .subtitle {
+        color: #5d4037;
+        font-size: 12pt;
+        margin-top: 0;
+      }
+      .cover {
+        text-align: center;
+        padding: 40px 0 24px;
+        border-bottom: 3px solid #2e5016;
+        margin-bottom: 18px;
+      }
+      .badge {
+        display: inline-block;
+        background: #f1f8e9;
+        color: #33691e;
+        border: 1px solid #aed581;
+        border-radius: 20px;
+        padding: 3px 12px;
+        font-size: 9pt;
+        margin: 2px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 8px 0 14px;
+        font-size: 10pt;
+      }
+      th,
+      td {
+        border: 1px solid #c5e1a5;
+        padding: 6px 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #dcedc8;
+        color: #2e5016;
+      }
+      tr:nth-child(even) td {
+        background: #f7fbf0;
+      }
+      .qa {
+        background: #f1f8e9;
+        border-left: 4px solid #7cb342;
+        padding: 8px 12px;
+        margin: 8px 0;
+        border-radius: 4px;
+      }
+      .qa .q {
+        font-weight: 600;
+        color: #2e5016;
+      }
+      ul {
+        margin: 4px 0 10px;
+        padding-left: 20px;
+      }
+      li {
+        margin: 2px 0;
+      }
+      .note {
+        font-size: 9.5pt;
+        color: #5d4037;
+        font-style: italic;
+      }
+      code {
+        background: #eef3e3;
+        padding: 1px 4px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cover">
+      <h1>🌾 Agricultural Knowledge Base</h1>
+      <p class="subtitle">Kisan Mitra — AI Farmer Assistant · India &amp; Karnataka Focus</p>
+      <div>
+        <span class="badge">Crop Diseases</span>
+        <span class="badge">Fertilizers</span>
+        <span class="badge">Irrigation</span>
+        <span class="badge">Government Schemes</span>
+        <span class="badge">Market &amp; MSP</span>
+        <span class="badge">Soil Health</span>
+      </div>
+    </div>
+
+    <h2>0. How the assistant should use this document</h2>
+    <ul>
+      <li>You are <strong>Kisan Mitra</strong>, a friendly, practical farming advisor for Indian farmers, especially in Karnataka.</li>
+      <li>Answer in the <strong>same language the farmer used</strong> (Kannada or English). Keep answers short, simple, and step-by-step — many users are listening, not reading.</li>
+      <li>Give <strong>actionable advice</strong>: what to check, what to apply, dosage, and when. Mention low-cost / organic options first where sensible.</li>
+      <li>For chemicals/pesticides, always add a safety reminder and advise consulting the local <strong>Krishi Vigyan Kendra (KVK)</strong> or agriculture officer for exact dosage.</li>
+      <li>For schemes, give the gist and direct the farmer to the official portal or nearest <strong>Raitha Samparka Kendra</strong>.</li>
+    </ul>
+
+    <h2>1. Major Crops (Karnataka &amp; India)</h2>
+    <table>
+      <tr><th>Crop</th><th>Kannada</th><th>Season</th><th>Key notes</th></tr>
+      <tr><td>Paddy / Rice</td><td>ಭತ್ತ (Bhatta)</td><td>Kharif</td><td>Needs standing water; major in Tunga-Bhadra, Cauvery belts.</td></tr>
+      <tr><td>Ragi / Finger millet</td><td>ರಾಗಿ (Raagi)</td><td>Kharif</td><td>Drought-tolerant staple of South Karnataka.</td></tr>
+      <tr><td>Maize</td><td>ಮೆಕ್ಕೆಜೋಳ</td><td>Kharif/Rabi</td><td>Both grain and fodder; responds well to N.</td></tr>
+      <tr><td>Tomato</td><td>ಟೊಮೇಟೊ</td><td>Year-round</td><td>High-value; prone to blight, leaf curl, wilt.</td></tr>
+      <tr><td>Cotton</td><td>ಹತ್ತಿ (Hatti)</td><td>Kharif</td><td>Watch for bollworm, whitefly.</td></tr>
+      <tr><td>Sugarcane</td><td>ಕಬ್ಬು (Kabbu)</td><td>Annual</td><td>Heavy water + nutrient feeder.</td></tr>
+      <tr><td>Groundnut</td><td>ಶೇಂಗಾ</td><td>Kharif/Rabi</td><td>Legume; needs gypsum at pegging.</td></tr>
+      <tr><td>Pulses (tur/gram)</td><td>ತೊಗರಿ/ಕಡಲೆ</td><td>Kharif/Rabi</td><td>Fix nitrogen; good for rotation.</td></tr>
+    </table>
+
+    <h2>2. Crop Diseases &amp; Pest Management</h2>
+
+    <h3>2.1 Tomato — yellowing leaves (very common question)</h3>
+    <p>Yellow tomato leaves usually mean one of these — diagnose by pattern:</p>
+    <table>
+      <tr><th>Pattern</th><th>Likely cause</th><th>Action</th></tr>
+      <tr><td>Older/lower leaves yellow first, even color</td><td>Nitrogen deficiency</td><td>Apply urea/compost or 19:19:19 foliar spray.</td></tr>
+      <tr><td>Yellow between veins, veins stay green</td><td>Magnesium / iron deficiency</td><td>Spray Epsom salt (MgSO₄) 1% or micronutrient mix.</td></tr>
+      <tr><td>Yellowing + wilting one side, brown stem inside</td><td>Fusarium / bacterial wilt</td><td>Remove plant; rotate crop; use resistant varieties; soil drench.</td></tr>
+      <tr><td>Curling + yellow + stunted, whiteflies present</td><td>Tomato leaf curl virus (spread by whitefly)</td><td>Control whitefly (yellow sticky traps, neem oil); remove infected plants.</td></tr>
+      <tr><td>Yellow with brown spots / concentric rings</td><td>Early blight (Alternaria)</td><td>Spray Mancozeb; remove affected leaves; avoid overhead watering.</td></tr>
+      <tr><td>Overwatered, soggy soil</td><td>Root suffocation</td><td>Improve drainage; reduce irrigation.</td></tr>
+    </table>
+
+    <h3>2.2 Other common diseases</h3>
+    <ul>
+      <li><strong>Paddy blast:</strong> diamond-shaped grey spots on leaves. Use resistant varieties, balanced N (avoid excess), spray Tricyclazole.</li>
+      <li><strong>Paddy bacterial leaf blight:</strong> leaf tips yellow then dry. Drain field, avoid excess nitrogen, use certified seed.</li>
+      <li><strong>Cotton bollworm:</strong> holes in bolls. Use pheromone traps, Bt cotton, need-based spraying.</li>
+      <li><strong>Powdery mildew (many crops):</strong> white powder on leaves. Spray wettable sulphur or neem.</li>
+      <li><strong>Downy mildew:</strong> yellow patches with greyish underside. Improve airflow, spray Metalaxyl + Mancozeb.</li>
+      <li><strong>Aphids / whitefly / thrips:</strong> sap-suckers, cause curling and virus spread. Neem oil 5 ml/L, yellow/blue sticky traps, Imidacloprid if severe.</li>
+    </ul>
+    <p class="note">Always start with cultural + organic controls (sanitation, traps, neem). Use chemical pesticides only as needed and follow label dosage and pre-harvest intervals.</p>
+
+    <h2>3. Fertilizers &amp; Nutrient Management</h2>
+    <h3>3.1 The three main nutrients (NPK)</h3>
+    <table>
+      <tr><th>Nutrient</th><th>Role</th><th>Deficiency sign</th><th>Common source</th></tr>
+      <tr><td>Nitrogen (N)</td><td>Leaf &amp; vegetative growth</td><td>Old leaves yellow, stunted</td><td>Urea (46% N), compost</td></tr>
+      <tr><td>Phosphorus (P)</td><td>Roots, flowering</td><td>Purple/dark leaves, poor roots</td><td>DAP, SSP</td></tr>
+      <tr><td>Potassium (K)</td><td>Fruit quality, disease resistance</td><td>Leaf-edge scorching</td><td>MOP (potash)</td></tr>
+    </table>
+    <h3>3.2 Practical guidance</h3>
+    <ul>
+      <li>Apply fertilizer based on a <strong>Soil Health Card</strong> recommendation — don't over-apply urea.</li>
+      <li>Split nitrogen into 2–3 doses (basal + top-dressing) for better uptake.</li>
+      <li>Use <strong>organic manure</strong> (FYM, vermicompost) to improve soil structure and water holding.</li>
+      <li><strong>Biofertilizers</strong>: Rhizobium (pulses), Azospirillum, PSB reduce chemical need.</li>
+      <li>Micronutrients (Zn, Fe, B) matter for tomato, paddy, pulses — correct with foliar sprays.</li>
+    </ul>
+
+    <h2>4. Irrigation &amp; Water Management</h2>
+    <ul>
+      <li><strong>Drip irrigation:</strong> saves 40–60% water, ideal for tomato, cotton, sugarcane, orchards. Subsidies available (see schemes).</li>
+      <li><strong>Sprinkler:</strong> good for groundnut, pulses, vegetables on undulating land.</li>
+      <li><strong>Paddy:</strong> alternate wetting &amp; drying (AWD) saves water vs continuous flooding.</li>
+      <li>Irrigate <strong>early morning or evening</strong> to reduce evaporation.</li>
+      <li>Mulching (straw/plastic) conserves moisture and suppresses weeds.</li>
+      <li>Watch for over-irrigation — it causes root rot, yellowing, and nutrient leaching.</li>
+    </ul>
+
+    <h2>5. Soil Health</h2>
+    <ul>
+      <li>Get a <strong>Soil Health Card</strong> (free govt scheme) every 2–3 years for N-P-K and pH.</li>
+      <li>Ideal pH for most crops is 6.0–7.5. Acidic soil → add lime; alkaline → add gypsum.</li>
+      <li>Practice <strong>crop rotation</strong> (cereal → legume) to restore nitrogen and break pest cycles.</li>
+      <li>Green manure (sunhemp, dhaincha) ploughed in boosts organic matter.</li>
+      <li>Avoid burning crop residue — incorporate it or compost it.</li>
+    </ul>
+
+    <h2>6. Government Schemes (Central + Karnataka)</h2>
+    <table>
+      <tr><th>Scheme</th><th>Benefit</th><th>For whom</th></tr>
+      <tr><td>PM-KISAN</td><td>₹6,000/year in 3 installments of ₹2,000 (direct to bank)</td><td>Landholding farmer families</td></tr>
+      <tr><td>PM Fasal Bima Yojana (PMFBY)</td><td>Crop insurance against natural calamity; low premium (2% Kharif, 1.5% Rabi)</td><td>All farmers, esp. loanees</td></tr>
+      <tr><td>Kisan Credit Card (KCC)</td><td>Low-interest crop loans up to ₹3 lakh</td><td>All cultivators</td></tr>
+      <tr><td>Soil Health Card</td><td>Free soil testing &amp; nutrient advice</td><td>All farmers</td></tr>
+      <tr><td>PM-KUSUM</td><td>Subsidy for solar pumps &amp; solar power</td><td>Farmers with irrigation needs</td></tr>
+      <tr><td>Per Drop More Crop (PMKSY)</td><td>Subsidy on drip/sprinkler micro-irrigation</td><td>All farmers</td></tr>
+      <tr><td>Raitha Siri (Karnataka)</td><td>Incentive for millet (ragi/jowar) growers</td><td>Karnataka millet farmers</td></tr>
+      <tr><td>Krishi Bhagya (Karnataka)</td><td>Support for rainwater harvesting / farm ponds</td><td>Rainfed farmers in Karnataka</td></tr>
+      <tr><td>Raitha Samparka Kendra</td><td>Local hub for seeds, advice, scheme enrolment</td><td>All Karnataka farmers</td></tr>
+    </table>
+    <p class="note">Scheme amounts/rules change over time. Advise farmers to confirm at the official portal (pmkisan.gov.in, etc.) or the nearest Raitha Samparka Kendra / agriculture office.</p>
+
+    <h2>7. Market Information &amp; MSP</h2>
+    <ul>
+      <li><strong>MSP (Minimum Support Price):</strong> government-guaranteed price for notified crops (paddy, ragi, jowar, tur, cotton, groundnut, etc.), announced each season by CACP.</li>
+      <li><strong>eNAM (National Agriculture Market):</strong> online platform to sell produce across mandis for better prices — enam.gov.in.</li>
+      <li><strong>APMC mandis:</strong> regulated markets; check daily prices before selling.</li>
+      <li><strong>FPOs (Farmer Producer Organizations):</strong> group selling gets better rates and bargaining power.</li>
+      <li>Tips: grade and clean produce, sell in lots, track price trends, avoid distress sale right after harvest if storage is possible.</li>
+    </ul>
+
+    <h2>8. Seasons &amp; Calendar</h2>
+    <ul>
+      <li><strong>Kharif (monsoon):</strong> sow Jun–Jul, harvest Sep–Oct. Paddy, ragi, maize, cotton, tur, groundnut.</li>
+      <li><strong>Rabi (winter):</strong> sow Oct–Nov, harvest Feb–Mar. Wheat, gram, jowar, sunflower.</li>
+      <li><strong>Summer/Zaid:</strong> short irrigated crops — vegetables, groundnut, fodder.</li>
+    </ul>
+
+    <h2>9. Quick Q&amp;A (sample interactions)</h2>
+    <div class="qa">
+      <p class="q">Q: My tomato plant leaves are turning yellow. What should I do?</p>
+      <p>A: First check the pattern. If older leaves yellow evenly, it's likely nitrogen shortage — add compost or urea. If yellowing is between the veins, spray Epsom salt (magnesium). If leaves also curl and you see tiny white insects, it's leaf-curl virus from whiteflies — set yellow sticky traps, spray neem oil, and remove badly affected plants. Avoid overwatering and don't wet the leaves in the evening.</p>
+    </div>
+    <div class="qa">
+      <p class="q">Q: How much urea should I apply to paddy?</p>
+      <p>A: Follow your Soil Health Card. As a general guide, apply nitrogen in 3 splits — at transplanting, tillering, and panicle initiation — rather than all at once. Don't overdo urea: excess nitrogen invites blast and pest attack. Confirm exact quantity with your local Raitha Samparka Kendra.</p>
+    </div>
+    <div class="qa">
+      <p class="q">Q: Which scheme gives money directly to farmers?</p>
+      <p>A: PM-KISAN gives ₹6,000 per year in three ₹2,000 installments straight to your bank account. You need to register with your land records and Aadhaar at pmkisan.gov.in or your nearest agriculture office.</p>
+    </div>
+    <div class="qa">
+      <p class="q">Q: How can I save water for my crop?</p>
+      <p>A: Use drip irrigation (there's a government subsidy for it), water early morning or evening, and mulch the soil with straw to hold moisture. For paddy, try alternate wetting and drying instead of keeping the field always flooded.</p>
+    </div>
+
+    <p class="note" style="margin-top:24px;">
+      Disclaimer: This knowledge base is general guidance for an AI assistant demo. Pesticide dosages, scheme amounts, and MSP values change — farmers should verify with official sources (KVK, Raitha Samparka Kendra, government portals) before acting.
+    </p>
+  </body>
+</html>

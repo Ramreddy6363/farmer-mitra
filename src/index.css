@@ -1,0 +1,56 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-field-50: #f1f8e9;
+  --color-field-100: #dcedc8;
+  --color-field-200: #c5e1a5;
+  --color-field-300: #aed581;
+  --color-field-400: #9ccc65;
+  --color-field-500: #7cb342;
+  --color-field-600: #558b2f;
+  --color-field-700: #33691e;
+  --color-field-800: #2e5016;
+  --color-field-900: #1b3409;
+  --color-soil-500: #8d6e63;
+  --color-soil-700: #5d4037;
+  --color-wheat-400: #f4c430;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family:
+    'Inter',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth custom scrollbar for the chat panel */
+.chat-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-field-300);
+  border-radius: 9999px;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+.pulse-ring {
+  animation: pulse-ring 1.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
