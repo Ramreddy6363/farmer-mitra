@@ -5,3 +5,12 @@ dist-ssr
 .env
 .DS_Store
 *.log
+
+# Build artifacts
+*.tsbuildinfo
+
+# Large unused 3D model artifact
+*.fbx
+
+# Internal architecture / pricing docs — not for public repo
+temp/

@@ -3,7 +3,7 @@ import { useStore } from '@/store/useStore';
 import { useRecorder } from '@/hooks/useRecorder';
 import { speechToText } from '@/services/sarvamSTT';
 import { askAgent } from '@/services/lyzrService';
-import { textToSpeech } from '@/services/sarvamTTS';
+import { splitIntoChunks, synthesizeChunk } from '@/services/sarvamTTS';
 import { play } from '@/utils/audioBus';
 
 /**
@@ -40,15 +40,28 @@ export function useConversation() {
         const answer = await askAgent(transcript);
         addMessage('assistant', answer);
 
-        // 3) Text to speech
+        // 3+4) Text to speech + speak, pipelined so audio starts fast.
+        // Synthesize the first chunk, start playing it, and synthesize the
+        // next chunk while the current one is still speaking. This makes the
+        // avatar start talking after only the FIRST small chunk is ready,
+        // instead of waiting for the whole answer to be synthesized.
         setStatus('Preparing the answer…');
-        const clips = await textToSpeech(answer, language);
+        const chunks = splitIntoChunks(answer);
+        let next = synthesizeChunk(chunks[0], language);
 
-        // 4) Speak (mouth lip-syncs via audioBus level)
-        setAvatarState('speaking');
-        setStatus('');
-        for (const clip of clips) {
-          await play(clip);
+        for (let i = 0; i < chunks.length; i++) {
+          const blobs = await next;
+          // Kick off the next chunk's synthesis before playing this one.
+          if (i + 1 < chunks.length) {
+            next = synthesizeChunk(chunks[i + 1], language);
+          }
+          if (i === 0) {
+            setAvatarState('speaking');
+            setStatus('');
+          }
+          for (const blob of blobs) {
+            await play(blob);
+          }
         }
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Something went wrong.');

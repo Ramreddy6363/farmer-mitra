@@ -15,7 +15,13 @@ You have deep knowledge of:
 - Market prices, MSP, and where to sell produce (APMC markets)
 
 Answer in the same language the farmer uses (Kannada or English). Keep answers practical, simple, and actionable.
-If asked in Kannada, respond in Kannada. If asked in English, respond in English.`;
+If asked in Kannada, respond in Kannada. If asked in English, respond in English.
+
+IMPORTANT — keep answers SHORT but COMPLETE: about 2 to 4 full sentences. Be
+concise and give only the key, useful advice — but make every answer meaningful,
+informative, and self-contained. ALWAYS finish your sentence and complete your
+thought; never stop in the middle. This is a voice assistant, so a brief, clear,
+fully-finished reply is best — short, but never cut off.`;
 
 export async function askAgent(message: string): Promise<string> {
   if (!API_KEY) {
@@ -32,7 +38,12 @@ export async function askAgent(message: string): Promise<string> {
           { role: 'user', content: message },
         ],
         temperature: 0.7,
-        max_tokens: 512,
+        // Headroom so the model can FINISH its (short) answer naturally instead
+        // of being cut off mid-sentence. Brevity is enforced by the prompt, not
+        // by this cap — it's only a safety backstop. Kannada is very token-dense
+        // (a short 3-4 sentence Kannada reply can need ~600-900 tokens), so this
+        // must be generous or Kannada answers truncate mid-word.
+        max_tokens: 1024,
       },
       {
         headers: {
